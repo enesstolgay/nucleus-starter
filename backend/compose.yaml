@@ -6,6 +6,8 @@ services:
       - "8000:8000"
     volumes:
       - ./:/app
+      - /app/var/cache    # bu satırı ekle — cache'i host mount'undan izole eder
+      - /app/vendor        # bunu da eklemen performans açısından iyi olur
     environment:
       DATABASE_URL: postgresql://app:${POSTGRES_PASSWORD:-test}@database:5432/${POSTGRES_DB:-app}?serverVersion=16&charset=utf8
     depends_on:
