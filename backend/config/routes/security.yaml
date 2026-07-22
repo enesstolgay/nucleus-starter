@@ -4,3 +4,4 @@ _security_logout:
 
 api_login_check:
     path: /api/login_check
+    controller: App\Controller\SecurityController::check

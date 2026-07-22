@@ -1,0 +1,6 @@
+gesdinet_jwt_refresh_token:
+    object_manager: doctrine.orm.default_entity_manager
+    refresh_token_class: App\Entity\RefreshToken
+    ttl: 2592000 # 30 gün
+    ttl_update: true
+    single_use: false
